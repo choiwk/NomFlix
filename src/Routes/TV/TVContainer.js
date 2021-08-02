@@ -40,7 +40,7 @@ class TVContainer extends React.Component {
 
   render() {
     const { topRated, popular, airingToday, error, loading } = this.state;
-    console.log(this.state);
+
     return (
       <TVPresenter
         topRated={topRated}
