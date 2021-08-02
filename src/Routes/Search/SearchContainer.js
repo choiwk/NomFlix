@@ -43,7 +43,7 @@ class SearchContainer extends React.Component {
 
   render() {
     const { movieResults, tvResults, searchTerm, error, loading } = this.state;
-    console.log(this.handleSumbit);
+
     return (
       <SearchPresenter
         movieResults={movieResults}
