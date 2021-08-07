@@ -1,16 +1,13 @@
-// eslint-disable-next-line import/no-anonymous-default-export
-export default () => 'Detail';
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-// import React from 'react';
+const DetailPresenter = ({ result, error, loading }) => null;
 
-// function Detail() {
-//   return (
-//     <>
-//       <div>
-//         <p>안녕하세요 Detail이예요.</p>
-//       </div>
-//     </>
-//   );
-// }
+DetailPresenter.propTypes = {
+  result: PropTypes.array,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.string,
+};
 
-// export default Detail;
+export default DetailPresenter;
