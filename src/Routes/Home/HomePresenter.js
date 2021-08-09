@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Section from 'Components/Section';
 import Loader from 'Components/Loader';
+import Poster from 'Components/Poster';
+import Error from 'Components/Message';
 
 const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) =>
   loading ? (
@@ -11,25 +13,50 @@ const HomePresenter = ({ nowPlaying, upComing, popular, error, loading }) =>
     <Container>
       {nowPlaying && nowPlaying.length > 0 && (
         <Section title="Now Playing">
-          {nowPlaying.map((el) => (
-            <span key={el.id}>{el.title}</span>
+          {nowPlaying.map((movie) => (
+            <Poster
+              key={movie.id}
+              id={movie.id}
+              imageUrl={movie.poster_path}
+              title={movie.original_title}
+              rating={movie.vote_average}
+              isMovie={true}
+              year={movie.release_date && movie.release_date.substring(0, 4)}
+            />
           ))}
         </Section>
       )}
       {upComing && upComing.length > 0 && (
         <Section title="Upcoming Movies">
-          {upComing.map((el) => (
-            <span key={el.id}>{el.title}</span>
+          {upComing.map((movie) => (
+            <Poster
+              key={movie.id}
+              id={movie.id}
+              imageUrl={movie.poster_path}
+              title={movie.original_title}
+              rating={movie.vote_average}
+              isMovie={true}
+              year={movie.release_date.substring(0, 4)}
+            />
           ))}
         </Section>
       )}
       {popular && popular.length > 0 && (
         <Section title="Popular Movies">
-          {popular.map((el) => (
-            <span key={el.id}>{el.title}</span>
+          {popular.map((movie) => (
+            <Poster
+              key={movie.id}
+              id={movie.id}
+              imageUrl={movie.poster_path}
+              title={movie.original_title}
+              rating={movie.vote_average}
+              isMovie={true}
+              year={movie.release_date.substring(0, 4)}
+            />
           ))}
         </Section>
       )}
+      {error && <Error color="#e74c3c" text={error} />}
     </Container>
   );
 
