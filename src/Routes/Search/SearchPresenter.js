@@ -5,6 +5,7 @@ import Loader from 'Components/Loader';
 import Section from 'Components/Section';
 import Error from 'Components/Message';
 import Poster from 'Components/Poster';
+import { Helmet } from 'react-helmet';
 
 const SearchPresenter = ({
   movieResults,
@@ -16,6 +17,10 @@ const SearchPresenter = ({
   updateTerm,
 }) => (
   <Container>
+    <Helmet>
+      <title>Search | NomFlix</title>
+    </Helmet>
+
     <Form onSubmit={handleSubmit}>
       <Input
         placeholder="Search Movies or TV Shows.."
