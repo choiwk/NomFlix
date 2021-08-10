@@ -25,7 +25,7 @@ const HeaderTag = styled.header`
   position: fixed;
   display: flex;
   align-items: center;
-  padding: 0px 10px;
+  padding: 0px 30px;
   top: 0;
   left: 0;
   width: 100%;

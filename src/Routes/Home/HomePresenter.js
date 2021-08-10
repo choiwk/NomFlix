@@ -68,6 +68,8 @@ HomePresenter.propTypes = {
   error: PropTypes.string,
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 25px;
+`;
 
 export default HomePresenter;

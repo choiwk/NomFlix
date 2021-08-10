@@ -36,7 +36,6 @@ class DetailContainer extends React.Component {
       } else {
         ({ data: result } = await tvApi.showDetail(parseId));
       }
-      console.log(result);
     } catch {
       this.setState({ error: 'Cannot Find Anything' });
     } finally {
@@ -49,7 +48,6 @@ class DetailContainer extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
-    console.log(this.state);
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }

@@ -6,19 +6,6 @@ import Section from 'Components/Section';
 import Error from 'Components/Message';
 import Poster from 'Components/Poster';
 
-const Container = styled.div``;
-
-const Form = styled.form`
-  margin-bottom: 50px;
-  width: 100%;
-`;
-
-const Input = styled.input`
-  all: unset;
-  width: 100%;
-  font-size: 28px;
-`;
-
 const SearchPresenter = ({
   movieResults,
   tvResults,
@@ -83,6 +70,21 @@ const SearchPresenter = ({
       )}
   </Container>
 );
+
+const Container = styled.div`
+  padding: 25px;
+`;
+
+const Form = styled.form`
+  margin-bottom: 50px;
+  width: 100%;
+`;
+
+const Input = styled.input`
+  all: unset;
+  width: 100%;
+  font-size: 28px;
+`;
 
 SearchPresenter.propTypes = {
   movieResults: PropTypes.array,

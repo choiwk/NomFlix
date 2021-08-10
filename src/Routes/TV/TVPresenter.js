@@ -6,8 +6,6 @@ import Loader from 'Components/Loader';
 import Error from 'Components/Message';
 import Poster from 'Components/Poster';
 
-const Container = styled.div``;
-
 const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
   loading ? (
     <Loader />
@@ -58,6 +56,9 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
       {error && <Error color="#e74c3c" text={error} />}
     </Container>
   );
+const Container = styled.div`
+  padding: 25px;
+`;
 
 TVPresenter.propTypes = {
   topRated: PropTypes.array,
