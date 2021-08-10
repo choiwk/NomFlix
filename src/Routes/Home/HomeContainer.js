@@ -24,7 +24,7 @@ class HomeContainer extends React.Component {
       const {
         data: { results: popular },
       } = await moviesApi.popular();
-      // throw Error();
+
       this.setState({
         nowPlaying,
         upComing,
