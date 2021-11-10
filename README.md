@@ -1,5 +1,6 @@
-# 시연 
-![Nomflix_시연](https://user-images.githubusercontent.com/77766718/141105232-3cf7201b-3ab7-4f7e-813b-c845e7cf146b.gif)
+
+![Nomflix_시연](https://user-images.githubusercontent.com/77766718/141106163-372051c0-b488-4792-8e73-63588baf2399.gif)
+
 
 ## Screens
 
